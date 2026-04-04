@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Digital Numbers';
+    src: url(./assets/digital-7.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu Condensed';
+    src: url(./assets/UbuntuCondensed-Regular.ttf);
+}
+
+
+*{
+    background-color: #1C1A1A;
+    color: #BEAC9E;
+    font-family: 'Ubuntu Condensed';
+    font-weight: 200;
+}
+
+.title{
+    font-size: 3vw;
+    color: #238235;
+    
+    width: fit-content;
+}
+
+@keyframes blinking {
+    from, to {border-color: transparent;}
+    50% {border-color: orange;}
+    
+}
