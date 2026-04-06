@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar Mono</title>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h2 class="title">CALENDAR MONO</h2>
 
-    <div class="calendar-div">
-        
+    <div class="parent-container">
+        <div class="container">
+            <h2 class="title">CALENDAR MONO_</h2>
+            <div class="calendar-div">
+                <div class="time-and-month">
+                    <p id="month-display"></p>
+                    <p id="time-display"></p>
+                </div>
+                <div id="calendar-days"></div>
+                <div id="calender-dates"></div>
+            </div>
+        </div>
+
+        <div class="timecontainer">
+            <div class="time-border">
+                <p id="day"></p>
+                <p id="full-date"></p>
+                <p id="full-time"></p>
+            </div>
+        </div>
     </div>
 
+
+    <script src="./script.js"></script>
 </body>
 </html>
