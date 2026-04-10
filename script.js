@@ -44,6 +44,26 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(clock, 1000)
     };
 
+    //Clock Widget
+
+    const hour = document.querySelector('.hour');
+    const minute = document.querySelector('.minute');
+    const second = document.querySelector('.second');
+
+    const deg = 6;
+
+    setInterval(() => {
+        let day = new Date();
+        let hours = day.getHours() * 30;
+        let minutes = day.getMinutes() * deg;
+        let seconds = day.getSeconds() * deg;
+
+        hour.style.setProperty('--rotate', (hours) + (minutes/12) + "deg");
+        minute.style.setProperty('--rotate', minutes + 'deg');
+        second.style.setProperty('--rotate', seconds + 'deg');
+    })
+
     clock()
     calendarRender(currentDate)
 });
+
