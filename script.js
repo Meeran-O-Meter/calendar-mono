@@ -7,6 +7,37 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentMonth = currentDate.toLocaleDateString('default', {month: 'long'});
     monthDisplay.innerHTML = currentMonth;
 
+
+function clockDate(){
+    setInterval(() => {
+        let dayClock = document.querySelector(".day-clock");
+        let dateClock = document.querySelector(".date-clock");
+        let digitalTimeClock = document.querySelector(".digital-time-clock");
+        let amPm = document.querySelector(".am-pm");
+        
+        let clockDate = today.getDate()
+        let clockMonth = today.toLocaleDateString('en-GB', {month: 'long'}).toUpperCase();
+        let clockYear = today.getFullYear()
+
+        const hour = currentDate.getHours()
+        const hours = hour < 10 ? "0" + hour : hour;
+        const minute = currentDate.getMinutes()
+        const minutes = minute < 10 ? "0" + minute : minute;
+       
+        dayClock.textContent = today.toLocaleString('en-US', {weekday: 'long'});
+        dateClock.innerHTML = `${clockDate} <span class="month-clock">${clockMonth}</span> ${clockYear}`;
+        
+        
+        digitalTimeClock.innerHTML = hours + ":" + minutes
+        if (today.getHours() >= 12) {
+            amPm.innerHTML = 'PM';
+        }
+        else{
+            amPm.innerHTML = "AM";
+        };
+    }, 1000);
+}
+
     function calendarRender(date) {
         const year = date.getFullYear();
         const month = date.getMonth();
@@ -28,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const dayDiv = document.createElement('div')
             dayDiv.textContent = i
             if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
-                dayDiv.classList.add('today')
+                dayDiv.classList.add('today');
             }
             calendarDates.appendChild(dayDiv);
         }
@@ -63,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         second.style.setProperty('--rotate', seconds + 'deg');
     })
 
+    clockDate()
     clock()
     calendarRender(currentDate)
 });
