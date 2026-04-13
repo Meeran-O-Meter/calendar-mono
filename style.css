@@ -27,11 +27,15 @@
 .parent-container{
     display: flex;
     gap: 10vw;
+    height: fit-content;
+    margin-bottom: 0;
 }
 
 .container{ 
     display: block;
     margin-top: 5%;
+    margin-bottom: 0;
+    height: 100%;
 }
 
 .title{
@@ -165,8 +169,8 @@
     margin-top: 13.5%;
     margin-left: 2rem;
     display: block;
-    border: red 1px solid;
     width: 100%;
+    margin-bottom: 0;
 }
 
 .day-clock{
@@ -215,4 +219,36 @@
 
 .am-pm{
     font-size: 0.8rem;
+}
+
+/* Quote */
+
+.quote-container{
+    margin-top: 5vh;
+    border: #3E3936 2px solid;
+    border-radius: 8px;
+    width: 50%;
+    height:23vw;
+    text-align: center;
+    padding: 0 0.3rem;
+}
+
+.quote-title{
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    font-family: 'Robotos' ;
+    text-decoration: line-through;
+    font-size: 2rem;
+}
+
+
+.quote{
+    margin: 0;
+    margin-left: 1rem;
+    width: 3;
+    text-align: left;
+    font-size: 1.4rem;
+    
 }
